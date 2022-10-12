@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farraz L N</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="https://www.instagram.com/farraz_z/?hl=id" class="logo" target="_blank">Farraz L N</a>
+      <div class="toggle"></div>
+      <ul class="navigation">
+        <li><a href="https://www.instagram.com/farraz_z/?hl=id" class="active" target="_blank">Home</a></li>
+        <li><a href="http://farrazx.github.io/portofolio" target="_blank">About</a></li>
+        <li><a href="http://wa.me/6285773470874" target="_blank">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars" />
+      <img src="stars2.png" id="stars2" />
+      <img src="moon.png" id="moon" />
+      <h2 id="text">Text Eksplanasi</h2>
+      <img src="rock.png" id="rock" />
+      <img src="masjid.png" id="masjid" />
+      <img src="bottom.png" id="bottom" />
+      <img src="lamp.png" id="lamp" />
+    </section>
+    <div class="sec">
+      <h2>Arus Mudik Lebaran</h2>
+      <p>
+        Arus mudik Lebaran dapat dikatakan sebagai salah satu momok yang selalu menghantui para pemudik setiap tahunnya. Menghabiskan waktu berjam-jam di perjalanan pulang bukanlah hal yang layak dikatakan sebagai impian para pemudik.
+        Kelelahan fisik dan pikiran dapat berakibat buruk bukan hanya bagi sang pengemudi, tapi setiap orang yang berangkat bersamanya dan para pengemudi lain.
+      </p>
+      <br />
+      <br />
+      <p>
+        Arus mudik Lebaran terjadi karena beberapa alasan. Salah satunya adalah waktu keberangkatan yang sama di antara banyak pemudik. Meski pemerintah telah menetapkan waktu libur bersama Lebaran yang cukup panjang, namun hal ini tidak
+        terlalu berdampak mengingat masih banyak perusahaan yang menerapkan tanggal dimulainya libur pada tanggal yang bersamaan. Dampaknya pun tidak dapat terhindarkan. masih banyak pemudik yang terjebak di jalan untuk waktu yang cukup
+        lama.
+      </p>
+      <br />
+      <br />
+      <p>
+        Untuk mengatasi hal ini, pemudik harus bijak memilih tanggal keberangkatan dan kembali mereka. Upayakan agar tidak berangkat pada tanggal yang diprediksi mengalami kemacetan parah. Informasi ini dapat diperoleh melalui rilis
+        informasi dari kementerian terkait, terutama Kementerian Perhubungan dan Kepolisian Republik Indonesia.
+      </p>
+    </div>
+    <script>
+      let stars = document.getElementById('stars');
+      let stars2 = document.getElementById('stars2');
+      let moon = document.getElementById('moon');
+      let rock = document.getElementById('rock');
+      let masjid = document.getElementById('masjid');
+      let text = document.getElementById('text');
+      let header = document.getElementById('header');
+
+      window.addEventListener('scroll', function () {
+        let value = window.scrollY;
+        stars.style.bottom = value * 0.05 + '%';
+        stars2.style.bottom = value * 0.025 + '%';
+        moon.style.bottom = value * -0.5 + 'px';
+        rock.style.bottom = value * -0.75 + 'px';
+        masjid.style.bottom = value * -0.15 + 'px';
+
+        text.style.right = -100 + value * 0.5 + '%';
+        text.style.top = 50 + value * 0.1 + '%';
+
+        header.style.top = value * 0.5 + 'px';
+      });
+
+      const toggleMenu = document.querySelector('.toggle');
+      const navigation = document.querySelector('.navigation');
+      toggleMenu.onclick = function () {
+        toggleMenu.classList.toggle('active');
+        navigation.classList.toggle('active');
+      };
+    </script>
+  </body>
+</html>
